@@ -18,7 +18,7 @@ test.afterEach.always(t => {
   process.chdir(t.context.cwd);
 });
 
-test.serial('Updade package.json', async t => {
+test.serial('Update package.json', async t => {
   // Create package.json in repository root
   await writeJson('./package.json', {version: '0.0.0-dev'});
 
@@ -30,7 +30,7 @@ test.serial('Updade package.json', async t => {
   t.true(t.context.log.calledWithMatch(/package.json/, '1.0.0'));
 });
 
-test.serial('Updade package.json and npm-shrinkwrap.json', async t => {
+test.serial('Update package.json and npm-shrinkwrap.json', async t => {
   // Create package.json in repository root
   await writeJson('./package.json', {version: '0.0.0-dev'});
   // Create a npm-shrinkwrap.json file
