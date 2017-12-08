@@ -18,12 +18,12 @@ async function getLastRelease(pluginConfig, {pkg, logger}) {
   return getLastReleaseApm(pkg, logger);
 }
 
-async function publish(pluginConfig, {pkg, nextRelease: {version}, logger}) {
+async function publish(pluginConfig, {pkg, nextRelease, logger}) {
   if (!verified) {
     await verifyApm(pkg, logger);
     verified = true;
   }
-  await publishApm(version, logger);
+  await publishApm(nextRelease.version, logger);
 }
 
 module.exports = {
