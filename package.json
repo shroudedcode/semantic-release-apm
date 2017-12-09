@@ -20,6 +20,7 @@
     "@semantic-release/error": "^2.1.0",
     "execa": "^0.8.0",
     "fs-extra": "^4.0.2",
+    "read-pkg-up": "^3.0.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
   },
